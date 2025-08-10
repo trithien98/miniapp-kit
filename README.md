@@ -1,10 +1,25 @@
+# miniapp-mf
+
+## Linting & Formatting
+
+This repo uses ESLint and Prettier at the workspace root.
+
+- Lint all packages:
+  - `yarn lint`
+  - auto-fix: `yarn lint:fix`
+- Format code:
+  - `yarn format`
+  - check only: `yarn format:check`
+
+Each package also has its own `lint` and `format` scripts.
+
 # KIT‑X Style Micro‑Frontend Kit (MVP)
 
 Minimal monorepo with:
 
--   miniapp-account-summary: React-in-WebComponent miniapp (Lit + React)
--   bff-account-summary: Apollo GraphQL BFF
--   shell-host: Demo shell that loads the miniapp bundle by URL
+- miniapp-account-summary: React-in-WebComponent miniapp (Lit + React)
+- bff-account-summary: Apollo GraphQL BFF
+- shell-host: Demo shell that loads the miniapp bundle by URL
 
 See docs/req.md for the architectural notes and file descriptions.
 
@@ -21,10 +36,9 @@ docker compose up --build
 
 ## Local Dev (optional)
 
--   Uses Yarn workspaces. From repo root run:
+- Uses Yarn workspaces. From repo root run:
+  - Install: `yarn install`
+  - Build all: `yarn build`
+  - Run a package script: `yarn workspace <name> <script>`
 
-    -   Install: `yarn install`
-    -   Build all: `yarn build`
-    -   Run a package script: `yarn workspace <name> <script>`
-
-    Each package remains runnable independently if desired.
+  Each package remains runnable independently if desired.

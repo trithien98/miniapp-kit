@@ -10,11 +10,26 @@
     "dev": "echo Use per-package dev scripts: 'yarn workspace <name> dev'",
     "dev-all": "concurrently -k -n bff,miniapp,shell -c cyan,magenta,green \"yarn workspace bff-account-summary dev\" \"yarn workspace miniapp-account-summary dev\" \"yarn workspace shell-host dev\"",
     "clean": "rm -rf packages/*/dist",
-    "postinstall": "echo Workspaces installed"
+    "postinstall": "echo Workspaces installed",
+    "lint": "eslint . --ext .ts,.tsx,.js,.cjs,.mjs",
+    "lint:fix": "eslint . --ext .ts,.tsx,.js,.cjs,.mjs --fix",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check"
   },
   "devDependencies": {
-  "concurrently": "^8.2.2",
-  "tsx": "^4.20.3"
+    "concurrently": "^8.2.2",
+    "tsx": "^4.20.3",
+    "@typescript-eslint/eslint-plugin": "^8.0.1",
+    "@typescript-eslint/parser": "^8.0.1",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-lit": "^1.11.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "prettier": "^3.3.3"
   },
   "packageManager": "yarn@1.22.22"
 }

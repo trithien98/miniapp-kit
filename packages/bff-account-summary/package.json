@@ -1,26 +1,30 @@
 {
-    "name": "bff-account-summary",
-    "version": "1.0.0",
-    "private": true,
-    "type": "module",
-    "scripts": {
+  "name": "bff-account-summary",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
     "dev": "tsx watch src/index.ts",
-        "start": "node dist/index.js",
-        "build": "tsc -p .",
-        "postbuild": "cp src/schema.graphql dist/schema.graphql"
-    },
-    "dependencies": {
-        "@apollo/server": "^4.10.0",
-        "apollo-datasource-rest": "^3.7.0",
-        "cors": "^2.8.5",
-        "express": "^4.19.2",
-        "graphql": "^16.9.0"
-    },
-    "devDependencies": {
-        "@types/cors": "^2.8.19",
-        "@types/node": "^22.5.4",
-        "ts-node-dev": "^2.0.0",
-        "tsx": "^4.16.2",
-        "typescript": "^5.5.4"
-    }
+    "start": "node dist/index.js",
+    "build": "tsc -p .",
+    "postbuild": "cp src/schema.graphql dist/schema.graphql",
+    "lint": "eslint . --ext .ts,.js",
+    "lint:fix": "yarn lint --fix",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.10.0",
+    "apollo-datasource-rest": "^3.7.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "graphql": "^16.9.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/node": "^22.5.4",
+    "ts-node-dev": "^2.0.0",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.4"
+  }
 }

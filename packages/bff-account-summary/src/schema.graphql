@@ -1,14 +1,14 @@
 type Query {
-    me: User!
-    account: Account!
+  me: User!
+  account: Account!
 }
 
 type User {
-    id: ID!
-    name: String!
+  id: ID!
+  name: String!
 }
 
 type Account {
-    id: ID!
-    balance: Float!
+  id: ID!
+  balance: Float!
 }

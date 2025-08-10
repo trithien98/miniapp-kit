@@ -5,17 +5,12 @@ import { ApolloServer } from "@apollo/server";
 import { expressMiddleware } from "@apollo/server/express4";
 import { AccountsAPI } from "./datasources/AccountsAPI.js";
 
-const typeDefs = await readFile(
-  new URL("./schema.graphql", import.meta.url),
-  "utf8"
-);
+const typeDefs = await readFile(new URL("./schema.graphql", import.meta.url), "utf8");
 
 const resolvers = {
   Query: {
-    me: async (_: any, __: any, { dataSources }: any) =>
-      dataSources.accounts.getMe(),
-    account: async (_: any, __: any, { dataSources }: any) =>
-      dataSources.accounts.getAccount(),
+    me: async (_: any, __: any, { dataSources }: any) => dataSources.accounts.getMe(),
+    account: async (_: any, __: any, { dataSources }: any) => dataSources.accounts.getAccount(),
   },
 };
 
@@ -37,7 +32,7 @@ app.use(
         accounts: new AccountsAPI(),
       },
     }),
-  })
+  }),
 );
 
 app.listen(8080, () => {

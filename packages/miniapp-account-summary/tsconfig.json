@@ -1,20 +1,20 @@
 {
-    "compilerOptions": {
+  "compilerOptions": {
     "target": "ES2022",
-        "module": "ESNext",
-        "jsx": "react-jsx",
-        "moduleResolution": "Bundler",
-        "strict": true,
-        "skipLibCheck": true,
-        // Lit property/class decorators require legacy decorators transform
-        // Use legacy decorators rather than the new standard decorators
-        // to allow decorating class fields like `@property() foo = ''`.
-        "experimentalDecorators": true,
-        // Lit recommends disabling define semantics for legacy decorators
-        // so initializers run in the constructor (matches transpiled output).
-        "useDefineForClassFields": false,
+    "module": "ESNext",
+    "jsx": "react-jsx",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    // Lit property/class decorators require legacy decorators transform
+    // Use legacy decorators rather than the new standard decorators
+    // to allow decorating class fields like `@property() foo = ''`.
+    "experimentalDecorators": true,
+    // Lit recommends disabling define semantics for legacy decorators
+    // so initializers run in the constructor (matches transpiled output).
+    "useDefineForClassFields": false,
     "lib": ["ES2022", "DOM"],
-        "types": ["vite/client"]
-    },
-    "include": ["src"]
+    "types": ["vite/client"]
+  },
+  "include": ["src"]
 }

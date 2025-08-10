@@ -1,22 +1,22 @@
 services:
-    bff:
-        build:
-            context: .
-            dockerfile: packages/bff-account-summary/Dockerfile
-        ports: ["8080:8080"]
+  bff:
+    build:
+      context: .
+      dockerfile: packages/bff-account-summary/Dockerfile
+    ports: ["8080:8080"]
 
-    miniapp:
-        build:
-            context: .
-            dockerfile: packages/miniapp-account-summary/Dockerfile
-        environment:
-            BFF_URL: http://bff:8080
-        ports: ["8081:80"]
-        depends_on: [bff]
+  miniapp:
+    build:
+      context: .
+      dockerfile: packages/miniapp-account-summary/Dockerfile
+    environment:
+      BFF_URL: http://bff:8080
+    ports: ["8081:80"]
+    depends_on: [bff]
 
-    shell:
-        build:
-            context: .
-            dockerfile: packages/shell-host/Dockerfile
-        ports: ["5173:5173"]
-        depends_on: [miniapp]
+  shell:
+    build:
+      context: .
+      dockerfile: packages/shell-host/Dockerfile
+    ports: ["5173:5173"]
+    depends_on: [miniapp]
