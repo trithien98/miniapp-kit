@@ -8,8 +8,13 @@
   "scripts": {
     "build": "yarn workspaces run build",
     "dev": "echo Use per-package dev scripts: 'yarn workspace <name> dev'",
+    "dev-all": "concurrently -k -n bff,miniapp,shell -c cyan,magenta,green \"yarn workspace bff-account-summary dev\" \"yarn workspace miniapp-account-summary dev\" \"yarn workspace shell-host dev\"",
     "clean": "rm -rf packages/*/dist",
     "postinstall": "echo Workspaces installed"
+  },
+  "devDependencies": {
+  "concurrently": "^8.2.2",
+  "tsx": "^4.20.3"
   },
   "packageManager": "yarn@1.22.22"
 }
