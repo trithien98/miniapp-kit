@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.DS_Store
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+packages/bff-account-summary/dist/
+packages/bff-account-summary/node_modules/
+
+
+packages/shell-host/dist/
+packages/shell-host/node_modules/
+
+packages/miniapp-account-summary/dist/
+packages/miniapp-account-summary/node_modules/

@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shell Host</title>
+    <script type="module" src="/src/loader.ts"></script>
+  </head>
+  <body>
+    <h1>Shell Host</h1>
+    <div style="display:flex; gap:24px; align-items:flex-start">
+      <div>
+        <h2>Miniapp Slot</h2>
+        <!-- Mount point for the miniapp web component -->
+  <kitx-account-summary
+          app-id="account-summary"
+          version="1.0.0"
+          config-url="http://localhost:8081/config.json"
+  ></kitx-account-summary>
+      </div>
+
+      <div>
+        <h2>Events</h2>
+        <pre id="events" style="border:1px solid #ddd; padding:8px; width:420px; height:200px; overflow:auto"></pre>
+      </div>
+    </div>
+  </body>
+</html>

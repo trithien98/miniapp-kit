@@ -1,0 +1,14 @@
+type Query {
+    me: User!
+    account: Account!
+}
+
+type User {
+    id: ID!
+    name: String!
+}
+
+type Account {
+    id: ID!
+    balance: Float!
+}

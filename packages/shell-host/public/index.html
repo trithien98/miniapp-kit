@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KIT‑X Style Shell</title>
+        <script type="module" src="/src/loader.ts"></script>
+    </head>
+    <body>
+        <h1>Shell Host</h1>
+
+        <!-- The Shell decides what version/config to load -->
+    <kitx-account-summary
+            app-id="account-summary"
+            version="1.0.0"
+            config-url="http://localhost:8081/config.json"
+    ></kitx-account-summary>
+
+        <pre id="events"></pre>
+    </body>
+</html>

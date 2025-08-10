@@ -1,0 +1,4 @@
+{
+    "APP_NAME": "Account Summary",
+    "BFF_URL": "${BFF_URL}"
+}

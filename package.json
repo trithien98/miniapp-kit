@@ -1,0 +1,15 @@
+{
+  "name": "miniapp-mf",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "yarn workspaces run build",
+    "dev": "echo Use per-package dev scripts: 'yarn workspace <name> dev'",
+    "clean": "rm -rf packages/*/dist",
+    "postinstall": "echo Workspaces installed"
+  },
+  "packageManager": "yarn@1.22.22"
+}
